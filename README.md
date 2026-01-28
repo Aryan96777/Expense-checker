@@ -1,26 +1,36 @@
-# 💰 Expense Tracker (Vanilla JavaScript)
+# 💰 Pro Expense Tracker (INR)
 
-A simple, efficient, and responsive web application designed to help users track their daily income and expenses. This project was developed as part of my Web Development Internship at Codec Technologies.
+A professional personal finance tracking application developed during my Web Development Internship at Codec Technologies. This tool focuses on clean UI, data persistence, and real-time filtering.
 
-## 🚀 Features
-* **Dynamic Entry:** Add items with names and amounts instantly.
-* **Live Calculations:** Automatically calculates the total balance as you add or remove items.
-* **Persistent View:** Uses a clean table layout to display all transactions.
-* **Validation:** Ensures users enter valid data before updating the list.
+## 🚀 Core Features
+* **Indian Currency Support:** Uses the `Intl.NumberFormat` API to display amounts in the Indian numbering system (e.g., ₹1,00,000).
+* **Browser Persistence:** Integrated with `localStorage` so your data remains saved even after closing the tab or browser.
+* **Live Search & Filter:** Includes a real-time search bar to filter transactions by name or category using the `onkeyup` event.
+* **Category Breakdown:** Specific categories for Indian users like "Food & Swiggy," "Amazon & Myntra," and "UPI Transfers."
+* **Data Management:** Add new entries, delete specific items, or clear the entire dashboard with a single click.
 
-## 🛠️ Tech Stack
-* **HTML5:** Structured the data entry forms and display table.
-* **CSS3:** Custom styling for a modern, user-friendly interface.
-* **JavaScript (ES6):** Handled the core logic, event listeners, and DOM manipulation.
+## 🛠️ Technical Implementation
 
-## 🧠 Project Logic (For Presentation)
-1. **Event Listeners:** The app waits for a 'Click' event on the add button.
-2. **State Management:** Data is stored in a JavaScript array.
-3. **DOM Manipulation:** The script creates new `<tr>` (table row) elements dynamically to update the UI without a page refresh.
+### 1. The Logic Flow (JavaScript)
+The app uses a central array called `expenses`. 
+* **Create:** New objects are pushed to the array using `Date.now()` as a unique ID.
+* **Read:** The `updateUI()` function clears the list and re-renders it using template literals.
+* **Delete:** The `.filter()` method removes specific items based on their unique ID.
 
----
-## 📬 How to Use
-1. Download the `index.html` file.
-2. Open it in any modern web browser (Chrome, Safari, Edge).
-3. Start tracking your budget!
+
+
+### 2. Styling (CSS)
+* **Mobile-First:** Built with a responsive container that works on phones and desktops.
+* **UI/UX:** Uses a "Balance Card" design to highlight the total expenditure prominently.
+* **Interactive Elements:** Transition effects on buttons and hover states for a modern feel.
+
+## 📁 File Structure
+* `index.html` - The structural layout and form inputs.
+* `style.css` - The visual design and layout system.
+* `script.js` - The functional logic, calculations, and storage handling.
+
+## 💻 How to Run
+1. Clone the repository.
+2. Ensure all three files are in the same directory.
+3. Open `index.html` in any web browser.
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/3f969db5-a738-4533-8312-ff4c8d8c237c" />
