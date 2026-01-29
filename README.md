@@ -1,4 +1,4 @@
-# 💰 Pro Expense Tracker (INR)
+# 💰 Expense Tracker (INR)
 
 A professional personal finance tracking application developed during my Web Development Internship at Codec Technologies. This tool focuses on clean UI, data persistence, and real-time filtering.
 
