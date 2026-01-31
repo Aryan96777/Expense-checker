@@ -1,48 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pro Expense Tracker | INR</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pro Expense Tracker | INR</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="container">
-        <h2>Expense Tracker</h2>
-        
-        <div class="balance-card">
-            <h4>Total Spent</h4>
-            <h1 id="total-amount">₹0.00</h1>
-        </div>
+  <div class="container">
+    <h2>Expense Tracker</h2>
 
-        <div class="search-container">
-            <input type="text" id="search-input" onkeyup="filterExpenses()" placeholder="Search by name or category...">
-        </div>
+    
 
-        <form id="expense-form">
-            <input type="text" id="expense-name" placeholder="What did you buy?" required>
-            <input type="number" id="expense-amount" placeholder="Amount (₹)" required>
-            
-            <select id="expense-category">
-                <option value="Food">🍕 Food & Swiggy</option>
-                <option value="Recharge">📱 Mobile & Wifi</option>
-                <option value="Transport">🚲 Petrol & Auto</option>
-                <option value="Shopping">🛍️ Amazon & Myntra</option>
-                <option value="UPI">💸 UPI Transfer</option>
-                <option value="Rent">🏠 Rent & Bills</option>
-                <option value="Misc">📦 Other</option>
-            </select>
-            
-            <button type="submit">Add Expense</button>
-        </form>
-
-        <ul id="expense-list">
-            </ul>
-
-        <button id="clear-btn" onclick="clearAll()">Clear All Data</button>
+    <div class="balance-card">
+      <h4>Total Spent</h4>
+      <h1 id="total-amount">₹0.00</h1>
     </div>
 
-    <script src="script.js"></script>
+    <div class="search-container">
+      <input type="text" id="search-input" placeholder="Search by name or category..." onkeyup="filterExpenses()">
+    </div>
+
+    <form id="expense-form">
+      <input type="text" id="expense-name" placeholder="What did you buy?" required>
+      <input type="number" id="expense-amount" placeholder="Amount (₹)" required>
+
+      <select id="expense-category">
+        <option value="Food">🍕 Food & Swiggy</option>
+        <option value="Recharge">📱 Mobile & Wifi</option>
+        <option value="Transport">🚲 Petrol & Auto</option>
+        <option value="Shopping">🛍️ Amazon & Myntra</option>
+        <option value="UPI">💸 UPI Transfer</option>
+        <option value="Rent">🏠 Rent & Bills</option>
+        <option value="Misc">📦 Other</option>
+      </select>
+
+      <button type="submit">Add Expense</button>
+      <button id="logout-btn" onclick="logout()">Logout</button>
+    </form>
+
+    <ul id="expense-list"></ul>
+
+    <button id="clear-btn" onclick="clearAll()">Clear All Data</button>
+  </div>
+
+
+
+
+  <script src="script.js"></script>
 </body>
 </html>
